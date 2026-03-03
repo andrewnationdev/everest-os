@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -I./include
 SRC = src/main.c src/core/os_kernel.c src/drivers/display.c
 OBJ = $(SRC:.c=.o)
-TARGET = feature_phone
+TARGET = everest
 
 all: $(TARGET)
 

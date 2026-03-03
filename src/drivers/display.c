@@ -2,7 +2,7 @@
 #include <time.h>
 #include "../../include/display.h"
 
-void desenhar_barra_topo() {
+void draw_top_UI() {
     time_t rawtime;
     struct tm *info;
     char buffer[10];

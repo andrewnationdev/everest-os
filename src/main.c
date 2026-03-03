@@ -5,9 +5,9 @@
 
 int main() {
     printf("\033[2J"); // Limpa a tela no início
-    iniciar_boot();
-    sleep(1);
-    desenhar_barra_topo();
+    boot();
+    sleep(5);
+    draw_top_UI();
     printf("\n\n--- FEATURE PHONE OS ---\n");
     printf("Pressione Enter para sair...\n");
     getchar();

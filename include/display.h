@@ -1,6 +1,6 @@
 #ifndef DISPLAY_H
 #define DISPLAY_H
 
-void desenhar_barra_topo();
+void draw_top_UI();
 
 #endif

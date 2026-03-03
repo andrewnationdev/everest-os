@@ -14,3 +14,7 @@ void draw_top_UI() {
     printf(" [I] NO SERVICE       %s ", buffer);
     printf("\033[0m\n");
 }
+
+void init_graphics(){
+    printf("%s%s%s", BG_BLUE, FG_WHITE, CLR_SCREEN);
+}

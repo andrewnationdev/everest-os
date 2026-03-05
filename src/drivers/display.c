@@ -16,5 +16,10 @@ void draw_top_UI() {
 }
 
 void init_graphics(){
+    reset();
     printf("%s%s%s", BG_BLUE, FG_WHITE, CLR_SCREEN);
+}
+
+void reset(){
+    printf("\033[H\033[J");
 }

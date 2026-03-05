@@ -11,4 +11,6 @@ void draw_top_UI();
 
 void init_graphics();
 
+void reset();
+
 #endif

@@ -23,4 +23,6 @@ void io_update();
 
 int _kbhit();
 
+int getch(void);
+
 #endif

@@ -6,8 +6,10 @@
 #include "../../include/display.h"
 #include "../../include/io.h"
 #include "../../include/main_menu.h"
+#include "../../include/messages.h"
 
 char curr_app[12] = "";
+int app_return_val = 1;
 
 void boot()
 {
@@ -37,8 +39,14 @@ void watch()
             if (k == 'd'){
                 strncpy(curr_app, "dialer", sizeof(curr_app) - 1);
                 curr_app[sizeof(curr_app) - 1] = '\0';
+                continue;
             }
                 
+            if (k == 'm'){
+                strncpy(curr_app, "msg", sizeof(curr_app) - 1);
+                curr_app[sizeof(curr_app) - 1] = '\0';
+                continue;
+            }
 
             printf("\n[EVEREST] You've pressed a key :%c", k);
         }
@@ -52,6 +60,13 @@ void watch()
         if(strcmp(curr_app, "dialer") == 0){
             dialer_app();
         }
+
+        if(strcmp(curr_app, "msg") == 0){
+            messages_app();
+        }
+
+        strncpy(curr_app, "menu", sizeof(curr_app) - 1);
+        curr_app[sizeof(curr_app) - 1] = '\0';
 
         usleep(100000);
     }

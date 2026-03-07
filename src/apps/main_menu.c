@@ -6,8 +6,8 @@
 void display_menu() {
     app_init();
     printf("--- MAIN MENU ---\n");
-    printf("1. Messages\n");
-    printf("2. Contacts\n");
-    printf("0. Power Off\n");
+    printf("d. Dialer\n");
+    printf("m. Messages\n");
+    printf("q. Power Off\n");
     fflush(stdout);
 }

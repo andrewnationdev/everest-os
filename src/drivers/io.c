@@ -39,7 +39,7 @@ void io_init() {
 
 void io_update() {
     if(_kbhit()){
-        char key = getchar();
+        char key = getch();
 
         if(input_buffer.count < BUFFER_SIZE) {
             input_buffer.data[input_buffer.tail] = key;
@@ -59,4 +59,16 @@ char io_get_keypress() {
     input_buffer.count--;
 
     return key;
+}
+
+int getch(){
+    struct termios oldt, newt;
+    int ch;
+    tcgetattr(STDIN_FILENO, &oldt);
+    newt = oldt;
+    newt.c_lflag &= ~(ICANON | ECHO);
+    tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+    ch = getchar();
+    tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+    return ch;
 }

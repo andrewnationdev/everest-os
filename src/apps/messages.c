@@ -1,12 +1,3 @@
-# everest-os
-A simulation of an embedded operating system designed for a fictional feature phone
-
-```bash
-make && ./everest
-```
-# Apps Structure
-
-```c
 #include <stdio.h>
 #include <unistd.h>
 #include <stdbool.h>
@@ -16,7 +7,7 @@ make && ./everest
 
 bool running = true;
 
-int my_app(){
+int messages_app(){
     while(running){
         io_update();
         char k = io_get_keypress();
@@ -36,8 +27,7 @@ int my_app(){
 
 void render(){
     app_init();
-    printf("--- APP TITLE ---\n");
-    //...code goes here
+    printf("--- MESSAGES ---\n");
+    printf("No messages found");
     fflush(stdout);
 }
-```

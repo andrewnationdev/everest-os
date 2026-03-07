@@ -7,6 +7,10 @@
 #include "../../include/io.h"
 #include "../../include/main_menu.h"
 #include "../../include/messages.h"
+#include "../../include/calculator.h"
+#include "../../include/calls.h"
+#include "../../include/contacts.h"
+#include "../../include/settings.h"
 
 char curr_app[12] = "";
 int app_return_val = 1;
@@ -41,9 +45,33 @@ void watch()
                 curr_app[sizeof(curr_app) - 1] = '\0';
                 continue;
             }
+
+            if (k == 'c'){
+                strncpy(curr_app, "calc", sizeof(curr_app) - 1);
+                curr_app[sizeof(curr_app) - 1] = '\0';
+                continue;
+            }
                 
             if (k == 'm'){
                 strncpy(curr_app, "msg", sizeof(curr_app) - 1);
+                curr_app[sizeof(curr_app) - 1] = '\0';
+                continue;
+            }
+
+            if (k == 'r'){
+                strncpy(curr_app, "callsreg", sizeof(curr_app) - 1);
+                curr_app[sizeof(curr_app) - 1] = '\0';
+                continue;
+            }
+
+            if (k == 'k'){
+                strncpy(curr_app, "contacts", sizeof(curr_app) - 1);
+                curr_app[sizeof(curr_app) - 1] = '\0';
+                continue;
+            }
+
+            if (k == 's'){
+                strncpy(curr_app, "settings", sizeof(curr_app) - 1);
                 curr_app[sizeof(curr_app) - 1] = '\0';
                 continue;
             }
@@ -63,6 +91,22 @@ void watch()
 
         if(strcmp(curr_app, "msg") == 0){
             messages_app();
+        }
+
+        if(strcmp(curr_app, "calc") == 0){
+            calc_app();
+        }
+
+        if(strcmp(curr_app, "callsreg") == 0){
+            calls_register_app();
+        }
+
+        if(strcmp(curr_app, "settings") == 0){
+            settings_app();
+        }
+
+        if(strcmp(curr_app, "contacts") == 0){
+            contacts_app();
         }
 
         strncpy(curr_app, "menu", sizeof(curr_app) - 1);

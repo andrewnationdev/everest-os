@@ -6,6 +6,7 @@
 
 char phone_number[18];
 
+//TO BE REBUILT FROM SCRATCH WITH THE NEW LOGIC
 void dialer_app(){
     reset();
     printf("\033[5;1H");

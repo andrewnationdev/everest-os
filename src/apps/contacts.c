@@ -1,18 +1,3 @@
-# everest-os
-A simulation of an embedded operating system designed for a fictional feature phone
-
-```bash
-make && ./everest
-
-Keys:
-
-Press the key shown in the menu to open the app
-Press `b` to go back to menu from within an app
-
-```
-# Apps Structure
-
-```c
 #include <stdio.h>
 #include <unistd.h>
 #include <stdbool.h>
@@ -21,7 +6,12 @@ Press `b` to go back to menu from within an app
 #include "../../include/os_kernel.h"
 #include "../../include/io.h"
 
-int my_app(){
+typedef struct {
+    char name[20];
+    char phone_number[20];
+} Contact;
+
+int contacts_app(){
     bool running = true;
 
     while(running){
@@ -33,7 +23,7 @@ int my_app(){
             break;
         }
 
-        render_app();
+        render_contacts_app();
 
         usleep(50000);
     }
@@ -41,10 +31,10 @@ int my_app(){
     return 0;
 }
 
-void render_app(){
+void render_contacts_app(){
     app_init();
-    printf("--- APP TITLE ---\n");
+    printf("--- CONTACTS---\n");
+    printf("No contacts found");
     //...code goes here
     fflush(stdout);
 }
-```

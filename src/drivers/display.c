@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include "../../include/display.h"
+#include "../../include/logs.h"
 
 void draw_top_UI() {
     time_t rawtime;
@@ -17,7 +18,9 @@ void draw_top_UI() {
 
 void init_graphics(){
     reset();
+    report("START", "Initializing Graphics");
     printf("%s%s%s", BG_BLUE, FG_WHITE, CLR_SCREEN);
+    report("OK", "Initializing Graphics");
 }
 
 void reset(){

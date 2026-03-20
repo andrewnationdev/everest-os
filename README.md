@@ -3,12 +3,13 @@ A simulation of an embedded operating system designed for a fictional feature ph
 
 ```bash
 make && ./everest
+```
 
 Keys:
 
+```
 Press the key shown in the menu to open the app
 Press `b` to go back to menu from within an app
-
 ```
 # Apps Structure
 

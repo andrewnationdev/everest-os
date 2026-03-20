@@ -11,6 +11,7 @@
 #include "../../include/calls.h"
 #include "../../include/contacts.h"
 #include "../../include/settings.h"
+#include "../../include/logs.h"
 
 char curr_app[12] = "";
 int app_return_val = 1;

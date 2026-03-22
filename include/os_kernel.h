@@ -11,4 +11,6 @@ void app_init();
 
 bool is_celldata_available();
 
+int getBatteryLevel();
+
 #endif

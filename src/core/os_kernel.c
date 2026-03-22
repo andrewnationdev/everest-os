@@ -12,6 +12,7 @@
 #include "../../include/contacts.h"
 #include "../../include/settings.h"
 #include "../../include/logs.h"
+#include "../../include/storage.h"
 
 char curr_app[12] = "";
 int app_return_val = 1;
@@ -21,6 +22,7 @@ void boot()
     printf("EVEREST PHONE\n");
     init_graphics();
     io_init();
+
     strncpy(curr_app, "menu", sizeof(curr_app) - 1);
     curr_app[sizeof(curr_app) - 1] = '\0';
 }
@@ -125,4 +127,8 @@ void app_init(){
 
 bool is_celldata_available(){
     return false;
+}
+
+int getBatteryLevel(){
+    return 100;
 }

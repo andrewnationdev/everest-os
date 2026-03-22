@@ -32,9 +32,11 @@ int _kbhit() {
 }
 
 void io_init() {
+    report("START", "Initializing IO");
     input_buffer.head = 0;
     input_buffer.tail = 0;
     input_buffer.count = 0;
+    report("OK", "Initializing IO");
 }
 
 void io_update() {

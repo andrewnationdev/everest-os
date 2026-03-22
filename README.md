@@ -10,6 +10,8 @@ Keys:
 ```
 Press the key shown in the menu to open the app
 Press `b` to go back to menu from within an app
+Press `t` to toggle settings
+Press `w` to go up and `s` to go down
 ```
 # Apps Structure
 
@@ -49,3 +51,5 @@ void render_app(){
     fflush(stdout);
 }
 ```
+
+# TASKS

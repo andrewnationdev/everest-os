@@ -42,11 +42,11 @@ void initialize_apps(){
 
     //Calls Register
     strcpy(apps[4].name, "Calls Register");
-    apps[4].index = 0;
+    apps[4].index = 4;
 
     //Settings
     strcpy(apps[5].name, "Settings");
-    apps[5].index = 0;
+    apps[5].index = 5;
 }
 
 void boot()

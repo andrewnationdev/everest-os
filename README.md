@@ -8,12 +8,15 @@ make && ./everest
 Keys:
 
 ```
-Press the key shown in the menu to open the app
 Press `b` to go back to menu from within an app
 Press `t` to toggle settings
 Press `w` to go up and `s` to go down
+Press `q` in the main menu to power off
+Press `ENTER` to select items in the main menu
 ```
 # Apps Structure
+
+You can build your own apps by using this structure.
 
 ```c
 #include <stdio.h>

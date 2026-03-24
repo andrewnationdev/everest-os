@@ -20,7 +20,7 @@ void draw_top_UI() {
 void init_graphics(){
     reset();
     report("START", "Initializing Graphics");
-    printf("%s%s%s", BG_BLUE, FG_WHITE, CLR_SCREEN);
+    //printf("%s%s%s", BG_BLUE, FG_WHITE, CLR_SCREEN);
     report("OK", "Initializing Graphics");
 }
 

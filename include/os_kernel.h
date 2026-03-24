@@ -9,6 +9,8 @@ void watch();
 
 void app_init();
 
+void initialize_apps();
+
 bool is_celldata_available();
 
 int getBatteryLevel();

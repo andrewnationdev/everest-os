@@ -13,6 +13,8 @@ Press `t` to toggle settings
 Press `w` to go up and `s` to go down
 Press `q` in the main menu to power off
 Press `ENTER` to select items in the main menu
+Press `c` for backspace in dialer app
+Press `e` to call a number in dialer app
 ```
 # Apps Structure
 
